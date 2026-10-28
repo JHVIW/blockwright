@@ -110,4 +110,6 @@ def test_render_smoke(tmp_path):
     paths = render_views(blocks, size, tmp_path, meta=meta, views=["iso_se"], width=320, height=240)
     from PIL import Image
     img = Image.open([p for p in paths if str(p).endswith("iso_se.png")][0])
-    assert img.size == (320, 240) and len(set(img.convert("RGB").getdata())) > 20
+    import numpy as np
+    px = np.asarray(img.convert("RGB")).reshape(-1, 3)
+    assert img.size == (320, 240) and len(np.unique(px, axis=0)) > 20

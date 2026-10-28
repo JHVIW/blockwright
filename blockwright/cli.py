@@ -161,7 +161,7 @@ def cmd_materials(a) -> int:
     slug = Path(a.file).stem
     rep = materials.material_list(blocks)
     out = _ws() / "out" / "materials"
-    title = (md or {}).get("Name") if isinstance(md, dict) else None
+    title = (md or {}).get("name") if isinstance(md, dict) else None
     materials.write_materials(rep, out / f"{slug}.md", out / f"{slug}.json", title=title or slug)
     print(materials.to_markdown(rep, title=title or slug))
     if a.allowed:
