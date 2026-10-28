@@ -140,7 +140,7 @@ Run `python -m blockwright setup --force` to force re-extraction (`doctor` print
 |---|---|---|
 | synthetic 35x40x30 timber house (4.4k blocks) | 16.6k | 12–14 s |
 | same + dense leaf masses  | — | 15 s |
-| cc demo `b00_demo.litematic` | 3.4k | 13 s (CLI, incl. startup) |
+| demo `b00_demo.litematic` | 3.4k | 13 s (CLI, incl. startup) |
 
 Single iso view of the house ≈ 3 s in one process (views run in parallel, ~6–8 s each under load). Memory per worker ≈ 0.4 GB (peak, measured with tracemalloc) at 3200x2400 internal resolution.
 Implementation note: arrays are processed in 64k-sample chunks — on Windows larger temporaries go straight to
