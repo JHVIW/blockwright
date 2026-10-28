@@ -1,0 +1,10 @@
+{
+  "name": "blockwright",
+  "version": "0.1.0",
+  "description": "Handcrafted-quality Minecraft builds as real .litematic files: a builder -> critic agent loop on a game-accurate Python toolkit with QA, real-texture renders and Litematica-native validation.",
+  "author": { "name": "JHVIW", "url": "https://github.com/JHVIW" },
+  "homepage": "https://github.com/JHVIW/blockwright",
+  "repository": "https://github.com/JHVIW/blockwright",
+  "license": "MIT",
+  "keywords": ["minecraft", "litematica", "schematic", "litematic", "building", "voxel", "agents"]
+}

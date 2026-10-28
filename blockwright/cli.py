@@ -68,8 +68,12 @@ def cmd_doctor(_args) -> int:
 
 def cmd_where(_args) -> int:
     root = config.PKG_DIR.parent
-    print(json.dumps({"package": str(config.PKG_DIR), "docs": str(config.DOCS_DIR),
-                      "examples": str(root / "examples" / "builds"), "skill": str(root / "skills" / NAME),
+
+    def p(path):
+        return str(path) if path.exists() else f"(not in this install: {path.name} ships with the git checkout / plugin)"
+
+    print(json.dumps({"package": str(config.PKG_DIR), "docs": p(config.DOCS_DIR),
+                      "examples": p(root / "examples" / "builds"), "skill": p(root / "skills" / NAME),
                       "workspace": str(_ws())}, indent=1))
     return 0
 

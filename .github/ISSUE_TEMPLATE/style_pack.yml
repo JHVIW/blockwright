@@ -1,0 +1,18 @@
+name: Style pack or lesson
+description: Propose a new style pack, or a lesson that should go into docs/design/LESSONS.md
+labels: [design]
+body:
+  - type: input
+    id: style
+    attributes:
+      label: Style / topic
+      placeholder: e.g. "desert / adobe", or "lesson: balconies need corbels"
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: Palette, motifs, anti-patterns (or the lesson)
+      description: Use real 26.3 block ids. Renders (before/after) are the best argument.
+    validations:
+      required: true

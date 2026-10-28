@@ -1,0 +1,14 @@
+{
+  "name": "blockwright",
+  "owner": { "name": "JHVIW", "url": "https://github.com/JHVIW" },
+  "metadata": { "description": "blockwright: Minecraft builds as .litematic files with a builder -> critic agent loop" },
+  "plugins": [
+    {
+      "name": "blockwright",
+      "source": "./",
+      "description": "Design and generate handcrafted-quality Minecraft Java buildings as .litematic schematics in any style.",
+      "version": "0.1.0",
+      "category": "creative"
+    }
+  ]
+}

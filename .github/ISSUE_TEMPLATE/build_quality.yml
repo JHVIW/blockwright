@@ -1,0 +1,21 @@
+name: Build quality report
+description: The agent loop produced something that looks wrong or "AI-boxy"
+labels: [quality]
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: What did you ask for?
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What came out
+      description: Attach the render sheet (out/previews/<slug>/<slug>_sheet.png) and the QA report.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What is wrong with it?
