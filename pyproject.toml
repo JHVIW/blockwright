@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blockwright"
+version = "0.1.0"
+description = "Code-first Minecraft building: game-accurate .litematic schematics, QA, a real-texture renderer and a builder -> critic agent loop for Claude Code."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "JHVIW" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "pillow>=10.0",
+    "nbtlib>=2.0.4,<3",
+]
+keywords = ["minecraft", "litematica", "schematic", "litematic", "claude-code", "procedural", "voxel", "renderer"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment",
+    "Topic :: Multimedia :: Graphics :: 3D Rendering",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/JHVIW/blockwright"
+Issues = "https://github.com/JHVIW/blockwright/issues"
+
+[project.scripts]
+blockwright = "blockwright.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["blockwright*"]
+
+[tool.setuptools.package-data]
+blockwright = ["data/*.json", "java/*.java", "templates/*.tmpl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "assets: needs the Minecraft client textures (python -m blockwright setup)",
+    "jdk: needs the validator / a JDK (python -m blockwright setup --java ...)",
+]

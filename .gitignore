@@ -1,0 +1,23 @@
+# build outputs (per workspace)
+out/
+dist/
+scratch/
+# local caches / config
+.blockwright-cache/
+blockwright.json
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+.pytest_cache/
+.venv/
+venv/
+# never commit Mojang assets or game jars
+*.jar
+assets/minecraft/
+# editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
